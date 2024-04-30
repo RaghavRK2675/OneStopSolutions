@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Subject Selector</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="styles.css">
 <style>
   
   .subject-btn {
@@ -33,18 +33,18 @@
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgba(245, 245, 245, 0.08); border-bottom: 1px solid whitesmoke;">
     <div class="container">
         <!-- Left side: Brand -->
-        <a class="navbar-brand" href="/index.html">OneStopSolutions</a>
+        <a class="navbar-brand" href="index.html">OneStopSolutions</a>
   
         <!-- Center: Navigation Links -->
         <div class="navbar-nav mx-auto">
-            <a class="nav-item nav-link" href="/index.html">Home</a>
+            <a class="nav-item nav-link" href="index.html">Home</a>
             <a class="nav-item nav-link" href="notes_pdf.html">Notes</a>
             <a class="nav-item nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSexx5Kwza9OA15Q1OLKCit_kMUuDRdawL_6F-2hfRRMzln3Xw/viewform">Upload</a>
         </div>
   
         <!-- Right side: Login/Sign Up Button -->
         <div class="ml-auto">
-            <a class="btn btn-outline-light" href="/Sign in & Sign up page codes/index_sign_in.html">Login/Sign Up</a>
+            <a class="btn btn-outline-light" href="Sign in & Sign up page codes/index_sign_in.html">Login/Sign Up</a>
         </div>
     </div>
   </nav>
@@ -54,10 +54,10 @@
   <div class="semester" id="semester1">
     
     <h2 style="color: white;">Semester 1</h2>
-    <button class="subject-btn">MTH-174 Engineering Mathematics</button>
+    <button class="subject-btn" onclick="redirectToPDF('Advanced Engneering Maths.pdf')">MTH-174 Engineering Mathematics</button>
     <button class="subject-btn">MEC 135 Basics of Mechanical Engineering</button>
-    <button class="subject-btn">PHY 110 Engineering Physics</button>
-    <button class="subject-btn">CSE 326 Internet Programming Laboratory</button>
+    <button class="subject-btn" onclick="redirectToPDF('phy110.pdf')">PHY 110 Engineering Physics</button>
+    <button class="subject-btn" onclick="redirectToPDF('cse 326 html.pdf')">CSE 326 Internet Programming Laboratory</button>
     <button class="subject-btn">INT 108 Python Programming</button>
     <button class="subject-btn">PES 318 Soft Skills I</button>
   </div>
@@ -133,6 +133,15 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="script.js"></script>
 <script>
+function redirectToPDF(fileName) {
+  
+    var folderPath = "/books/sem 1/";
+    var fullPath = folderPath + fileName;
+    window.location.href = fullPath;
+}
+
+
+
   $(document).ready(function() {
     $('.subject-btn').hover(function() {
       $(this).css('transform', 'translateY(-10px)');
