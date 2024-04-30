@@ -1,0 +1,108 @@
+::-webkit-scrollbar {
+    width: 0;
+  }
+
+  @keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+
+body{
+color: aliceblue;
+background: linear-gradient(-45deg, rgb(47, 0, 79), rgb(154, 0, 214), rgba(32, 0, 0, 0.871), #2511d8);
+background-size: 150% 150%;
+  animation: gradient 7s ease infinite;
+}
+  .huge-buttons-section {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+  }
+
+
+  .btn1{
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.06);
+    color: white;
+    border: 1px solid rgba(245, 245, 245, 0.341);
+    width: 100%;
+    max-width: 250px; /* Adjust max-width as needed */
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .btn {
+    
+    background-color: rgba(255, 255, 255, 0.06);
+    color: white;
+    border: 1px solid rgba(245, 245, 245, 0.341);
+    width: 100%;
+    max-width: 250px; /* Adjust max-width as needed */
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .btn1 img {
+    width: 50px; /* Adjust image size as needed */
+    padding-top: 90px;
+  }
+
+  .btn:hover {
+    transform: scale(1.05); /* Enlarge the button */
+    opacity: 0.8; /* Reduce opacity on hover */
+    background-color: rgba(255, 255, 255, 0.06); /* Set background color on hover */
+    color: white; /* Set text color on hover */
+  }
+
+  .btn1:hover {
+    background-color: rgba(255, 255, 255, 0.123); /* Set background color on hover */
+     /* Set text color on hover */
+  }
+
+  .btn:hover:focus {
+    outline: none; /* Remove outline on focus */
+    box-shadow: none; /* Remove box shadow on focus */
+  }
+
+  /* New CSS for the loader */
+  
+.navbar-nav{
+padding-left: 120px;
+}
+
+/* Add glow effect on hover for Unicode symbol */
+@keyframes glow {
+  0% { text-shadow: 0 0 5px rgba(255,255,255,0.7); }
+  50% { text-shadow: 0 0 20px rgba(255,255,255,0.9), 0 0 30px rgba(255,255,255,0.5); }
+  100% { text-shadow: 0 0 5px rgba(255,255,255,0.7); }
+}
+
+span.glowing:hover {
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+.card {
+    margin-bottom: 20px;
+    border: none;
+    cursor: pointer;
+    background-color:rgba(255, 255, 255, 0.06);
+  }
+  .card:hover {
+    transform: translateY(-5px);
+  }
+

@@ -1,6 +1,6 @@
 const express = require("express")
 const app = express()
-const port = 4000
+const port = 5000
 const dotenv = require("dotenv")
 dotenv.config()
 const mongoose = require("mongoose")
@@ -10,11 +10,12 @@ const Notes = require("./models/noteModel")
 const MONGODB_URL= process.env.MONGO_URI;
 
 mongoose.connect(MONGODB_URL, {
-    useNewUrlParser: true,
+    /*useNewUrlParser: true,
     useUnifiedTopology: true
+    */
 }).then(()=>{
     console.log("Connected to MongoDB");
-}).catch((err)=>{
+}).catch((error)=>{
     console.log("Error connecting to MongoDB", err);
 })
 
@@ -26,7 +27,9 @@ app.get("/", (req, res) => {
     // res.send("Hello World!")
     res.render("index")
 });
-
+app.get("/save",(req,res)=>{
+    res.render("")
+})
 
 app.get("/notes",async(req,res)=>{
     try {
